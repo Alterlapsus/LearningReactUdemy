@@ -9,7 +9,7 @@ valorDado = 4;
 
 console.log(nombre, apellido, valorDado);
 
-// variables de scope estas pueden ser utilizadas localmente o globalmente por lo que permite realizarlo
+// variables de scope estas pueden ser utilizadas localmente o globalmente por lo que permite realizarlo, scope = alcance que las variables tienen
  
 
 if( true ){
