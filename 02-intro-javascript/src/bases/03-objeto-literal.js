@@ -33,7 +33,8 @@ console.table( {
 
 // si queremos crear otro objeto clonado realizamos una asignación de referencia es decir asignamos los parametros y valores del objeto literal persona a persona2
 
-// No debemos de realizar este tipo de mutaciones
+// No debemos de realizar este tipo de mutaciones como en el siguiente ejemplo: 
+
 // const persona2 = persona;
 
 // Forma correcta de crear un clon utilizando spread que son ... y el nombre del objeto que se quiere clonar
