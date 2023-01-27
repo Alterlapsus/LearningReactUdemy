@@ -1,64 +1,33 @@
 
 
-// Desestructuración de objetos
-// o también llamada
-// Asignación desestructurante
+// Desestructuración de Arreglos
+            //  ó
+// asignación desestructurante de arreglos 
 
-const persona = {
-    nombre: 'Israel',
-    edad: 25,
-    clave: 'Robot',
-    // rango: 'Soldado',
-};
+const personajes = ['Israel', 'Wilson', 'Luis'];
 
-// extrae lo que se coloca dentro de las llaves { nombre } de este objeto(persona)
+// extraer indediente los valores del arreglo
+// Para recorrer el arreglo, nos basamos en las posiciones con una coma , 
+const [ , , p2 ] = personajes;
 
-// const { nombre, edad, clave } = persona;
+console.log( p2 );
 
-// console.log( nombre );
-// console.log( edad );
-// console.log( clave );
-
-// si solo me interesa extraer una propiedad lo coloco entre llaves ({ nombre })
-
-// si el objeto no tiene una propiedad la podemos agregar y podemos añadirle su valor por defecto
-const prueba = ({ clave, nombre, edad, rango = 'capitan' }) => {
-
-    // const { nombre, edad, clave } = usuario;
-
-    // console.log( nombre, edad, rango );
-
-    // podemos retornar un objeto que tiene más objetos dentro 
-
-    return{
-        nombreClave: clave,
-        anios: edad,
-        latlng: {
-            lat: 14.1415,
-            lng: -12.3222,
-        }
-    }
-
+const retornaArreglo = () =>{
+    return ['ABC', 123]
 }
 
+// Desestructuración de arreglos
 
-// llamamos la función
-// desestructuración de objetos 
-// extraigo el objeto latlng
-// Si necesito la latitud y la longitud en sus respectivas constantes lo haré de esta forma latlng:{lat, lng} basicamente extrae la lat y lng pero ahora como constantes
-// de esta  manera podemos acceder a objetos anidados y asignarlos a constantes
+const [ letras, numeros ] = retornaArreglo();
+console.log( letras, numeros ); 
 
-// primera forma de hacerlo no muy común
-// const { nombreClave, anios, latlng:{ lat, lng } } = prueba( persona );
+// Tarea 
 
-// segunda forma de hacerlo lo más común 
-const { nombreClave, anios, latlng } = prueba( persona );
-// desestructuramos de nuevo
-const { lat, lng } = latlng; 
+const estado = ( valor ) =>{
+    return [ valor, () => { console.log('Hola Mundo') }];
+}
 
-console.log( nombreClave, anios );
-console.log( lat, lng );
-// se renombra de esta forma nombre:nombre2
-// const { nombre:nombre2 } = persona;
+const [nombre, setNombre] = estado( 'Israel ');
 
-// console.log( nombre2 );
+console.log( nombre );
+setNombre();
