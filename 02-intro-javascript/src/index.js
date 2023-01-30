@@ -1,33 +1,27 @@
 
+// import and export  
 
-// Desestructuración de Arreglos
-            //  ó
-// asignación desestructurante de arreglos 
 
-const personajes = ['Israel', 'Wilson', 'Luis'];
+// import { heroes } from '../src/data/heroes';
+// import { heroes } from '../src/data/heroes';
+// import { heroes } from './data/heroes';
 
-// extraer indediente los valores del arreglo
-// Para recorrer el arreglo, nos basamos en las posiciones con una coma , 
-const [ , , p2 ] = personajes;
+import heroes, { owners } from "./data/heroes";
 
-console.log( p2 );
+console.log( owners );
 
-const retornaArreglo = () =>{
-    return ['ABC', 123]
-}
 
-// Desestructuración de arreglos
+// const getHeroeById = ( id ) => {
+//     return heroes.find( (heroe) => heroes.id === id );
+// }
 
-const [ letras, numeros ] = retornaArreglo();
-console.log( letras, numeros ); 
+// segunda forma de reducir código 
 
-// Tarea 
+const getHeroeById = ( id ) => heroes.find( (heroe) => heroe.id === id );
 
-const estado = ( valor ) =>{
-    return [ valor, () => { console.log('Hola Mundo') }];
-}
+console.log( getHeroeById(2) );
 
-const [nombre, setNombre] = estado( 'Israel ');
+// Utilizar find and filter
+const getHeroesByOwner = ( owner ) => heroes.filter( (heroe) => heroe.owner === owner );
 
-console.log( nombre );
-setNombre();
+console.log( getHeroesByOwner('Marvel') ); 
