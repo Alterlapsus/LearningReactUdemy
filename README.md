@@ -1,5 +1,5 @@
 # Learning React Udemy
-Learning React(framework) whith teacher Fernando Herrera  (Udemy)    
+Learning React(framework) with teacher Fernando Herrera  (Udemy)    
   
  
    
